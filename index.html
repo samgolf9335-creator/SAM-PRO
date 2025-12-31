@@ -26,6 +26,37 @@
                 <li>📄 Fiches de renseignements élèves</li>
             </ul>
         </section>
+        <section class="pro-card accent-purple">
+    <div class="card-header">
+        <span class="icon">📔</span>
+        <h3>Mon Carnet de Bord</h3>
+    </div>
+    <div class="folder-grid">
+        <div class="folder-item" onclick="toggleFolder('folder-journal')">
+            <span>📅</span> Cahier journal
+        </div>
+        <div class="folder-item" onclick="toggleFolder('folder-mentales')">
+            <span>🧠</span> Mes cartes mentales
+        </div>
+        <div class="folder-item" onclick="toggleFolder('folder-rapports')">
+            <span>📊</span> Rapports
+        </div>
+        <div class="folder-item" onclick="toggleFolder('folder-stats')">
+            <span>📈</span> Statistiques
+        </div>
+    </div>
+
+    <div id="folder-journal" class="folder-content" style="display:none;">
+        <ul class="doc-list">
+            <li>📄 Semaine du 01 au 05 Janvier</li>
+        </ul>
+    </div>
+    <div id="folder-mentales" class="folder-content" style="display:none;">
+        <ul class="doc-list">
+            <li>📄 Carte mentale : Le futur simple</li>
+        </ul>
+    </div>
+    </section>
 
         <section class="pro-card accent-blue">
             <div class="card-header">
