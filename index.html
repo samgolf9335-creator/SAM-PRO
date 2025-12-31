@@ -14,65 +14,42 @@
         </div>
     </header>
 
-    <main class="container">
-        <section class="pro-card">
-            <div class="card-header">
-                <span class="icon">📁</span>
-                <h3>Documents Administratifs</h3>
-            </div>
-            <ul class="doc-list">
-                <li>📄 Registre d'appel</li>
-                <li>📄 Emploi du temps officiel</li>
-                <li>📄 Fiches de renseignements élèves</li>
-            </ul>
-        </section>
-        <section class="pro-card accent-purple">
-    <div class="card-header">
-        <span class="icon">📔</span>
-        <h3>Mon Carnet de Bord</h3>
-    </div>
-    <div class="folder-grid">
-        <div class="folder-item" onclick="toggleFolder('folder-journal')">
-            <span>📅</span> Cahier journal
+   <main class="container">
+    <section class="pro-section">
+        <div class="section-title">
+            <span class="title-icon">📂</span> <h2>Documents Administratifs</h2>
         </div>
-        <div class="folder-item" onclick="toggleFolder('folder-mentales')">
-            <span>🧠</span> Mes cartes mentales
+        <div class="button-grid">
+            <button class="grid-btn" onclick="toggleFolder('folder-appel')">📅 Cahier journal</button>
+            <button class="grid-btn" onclick="toggleFolder('folder-edt')">🧠 Mes cartes mentales</button>
+            <button class="grid-btn" onclick="toggleFolder('folder-eleves')">📊 Rapports</button>
+            <button class="grid-btn" onclick="toggleFolder('folder-profs')">📈 Statistiques</button>
         </div>
-        <div class="folder-item" onclick="toggleFolder('folder-rapports')">
-            <span>📊</span> Rapports
-        </div>
-        <div class="folder-item" onclick="toggleFolder('folder-stats')">
-            <span>📈</span> Statistiques
-        </div>
-    </div>
-
-    <div id="folder-journal" class="folder-content" style="display:none;">
-        <ul class="doc-list">
-            <li>📄 Semaine du 01 au 05 Janvier</li>
-        </ul>
-    </div>
-    <div id="folder-mentales" class="folder-content" style="display:none;">
-        <ul class="doc-list">
-            <li>📄 Carte mentale : Le futur simple</li>
-        </ul>
-    </div>
     </section>
 
-        <section class="pro-card accent-blue">
-            <div class="card-header">
-                <span class="icon">📚</span>
-                <h3>Ressources 6APG</h3>
-            </div>
-            <ul class="doc-list">
-                <li>
-                    <a href="https://drive.google.com/uc?export=download&id=1nIw3ytz2qXJcU9zXcQ4nV8exIlX4xhyD" target="_blank">
-                        📄 Corrigé : Le duel des talents !
-                    </a>
-                </li>
-                <li>📄 Préparation : Le futur simple & Le quartier</li>
-                <li>📄 Guide d'évaluation (Production écrite)</li>
-            </ul>
-        </section>
-    </main>
+    <section class="pro-section">
+        <div class="section-title">
+            <span class="title-icon">📚</span> <h2>Ressources Pédagogiques (6APG)</h2>
+        </div>
+        <div class="button-grid">
+            <button class="grid-btn" onclick="toggleFolder('folder-corriges')">✅ Corrigés</button>
+            <button class="grid-btn" onclick="toggleFolder('folder-prepa')">📝 Préparations</button>
+            <button class="grid-btn" onclick="toggleFolder('folder-eval')">🎯 Évaluations</button>
+            <button class="grid-btn" onclick="toggleFolder('folder-langue')">🗣️ Langue</button>
+        </div>
+    </section>
+
+    <section class="pro-section">
+        <div class="section-title">
+            <span class="title-icon">📔</span> <h2>Mon Carnet de Bord</h2>
+        </div>
+        <div class="button-grid">
+            <button class="grid-btn" onclick="toggleFolder('folder-journal')">📅 Cahier journal</button>
+            <button class="grid-btn" onclick="toggleFolder('folder-mentales')">🧠 Mes cartes mentales</button>
+            <button class="grid-btn" onclick="toggleFolder('folder-rapports')">📊 Rapports</button>
+            <button class="grid-btn" onclick="toggleFolder('folder-stats')">📈 Statistiques</button>
+        </div>
+    </section>
+</main>
 </body>
 </html>
