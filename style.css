@@ -61,3 +61,38 @@ body {
 .accent-blue {
     border-top: 5px solid #3498db;
 }
+.accent-purple {
+    border-top: 5px solid #9b59b6;
+}
+
+.folder-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.folder-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    transition: 0.3s;
+    border: 1px solid #eee;
+}
+
+.folder-item:hover {
+    background: #eef2f7;
+    border-color: #9b59b6;
+    transform: translateY(-2px);
+}
+
+.folder-content {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff;
+    border: 1px dashed #9b59b6;
+    border-radius: 8px;
+}
