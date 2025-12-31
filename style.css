@@ -96,3 +96,58 @@ body {
     border: 1px dashed #9b59b6;
     border-radius: 8px;
 }
+.pro-section {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-top: 4px solid #9b59b6; /* Bordure violette comme sur l'image */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
+
+.title-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Grille de boutons style image_e3a36c */
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colonnes comme sur l'image */
+    gap: 12px;
+}
+
+.grid-btn {
+    background-color: #f8f9fa; /* Gris très clair */
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #444;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.grid-btn:hover {
+    background-color: #f0f0f0;
+    border-color: #ddd;
+}
+
+.grid-btn::before {
+    margin-right: 8px;
+}
