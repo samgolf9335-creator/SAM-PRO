@@ -5,7 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAM-PRO | Espace Enseignant</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    
+    <script>
+        function toggleFolder(id) {
+            const folder = document.getElementById(id);
+            if (!folder) return; // Sécurité si l'ID n'existe pas
+
+            // On ferme les autres dossiers de la même section pour que ce soit propre
+            const parentSection = folder.closest('.pro-section');
+            parentSection.querySelectorAll('.folder-content').forEach(content => {
+                if (content.id !== id) {
+                    content.style.display = 'none';
+                }
+            });
+
+            // On affiche ou cache le dossier cliqué
+            if (folder.style.display === 'none' || folder.style.display === '') {
+                folder.style.display = 'block';
+            } else {
+                folder.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
     <header class="pro-header">
@@ -66,7 +87,7 @@
                 <li><a href="https://drive.google.com/uc?export=download&id=1VOkS1Bh0nnYchRKoVBH_z410McQpp8IM" target="_blank">📅 Télécharger l'Emploi du temps</a></li>
             </ul>
         </div>
-        </section>
+    </section>
 
     <section class="pro-section">
         <div class="section-header">
