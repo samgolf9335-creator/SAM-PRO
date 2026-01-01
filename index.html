@@ -29,7 +29,9 @@
         </div>
 
         <div id="folder-journal" class="folder-content" style="display:none;">
-            <ul class="doc-list"><li>📄 Pas de document pour le moment</li></ul>
+            <ul class="doc-list">
+                <li><a href="https://drive.google.com/uc?export=download&id=1dpiqHIZsXvOWav5gRxn6Hhry8tV25sVt" target="_blank">📄 Accéder au Cahier Journal</a></li>
+            </ul>
         </div>
         <div id="folder-mentales" class="folder-content" style="display:none;">
             <ul class="doc-list">
@@ -37,10 +39,14 @@
             </ul>
         </div>
         <div id="folder-rapports" class="folder-content" style="display:none;">
-            <ul class="doc-list"><li>📄 Liste des rapports administratifs</li></ul>
+            <ul class="doc-list">
+                <li><a href="https://drive.google.com/uc?export=download&id=1HBPqSnZeAo64NUEkY66jxNJkE_2FqDKg" target="_blank">📄 Consulter les Rapports</a></li>
+            </ul>
         </div>
         <div id="folder-stats" class="folder-content" style="display:none;">
-            <ul class="doc-list"><li>📈 Résultats du 1er Semestre</li></ul>
+            <ul class="doc-list">
+                <li><a href="https://drive.google.com/uc?export=download&id=1t5gdK4ShAwBG1Wx4GtNeX7wcT6kn2zKp" target="_blank">📈 Voir les Statistiques de classe</a></li>
+            </ul>
         </div>
     </section>
 
@@ -55,19 +61,12 @@
             <button class="grid-btn" onclick="toggleFolder('folder-planif')">📈 Planification annuelle</button>
         </div>
 
-        <div id="folder-appel" class="folder-content" style="display:none;">
-            <ul class="doc-list"><li>📋 Liste des élèves 6APG</li></ul>
-        </div>
         <div id="folder-edt" class="folder-content" style="display:none;">
-            <ul class="doc-list"><li>📅 Emploi du temps hebdomadaire</li></ul>
+            <ul class="doc-list">
+                <li><a href="https://drive.google.com/uc?export=download&id=1VOkS1Bh0nnYchRKoVBH_z410McQpp8IM" target="_blank">📅 Télécharger l'Emploi du temps</a></li>
+            </ul>
         </div>
-        <div id="folder-vacances" class="folder-content" style="display:none;">
-            <ul class="doc-list"><li>🌴 Calendrier officiel des vacances</li></ul>
-        </div>
-        <div id="folder-planif" class="folder-content" style="display:none;">
-            <ul class="doc-list"><li>📑 Progression annuelle 2025-2026</li></ul>
-        </div>
-    </section>
+        </section>
 
     <section class="pro-section">
         <div class="section-header">
@@ -85,32 +84,7 @@
                 <li><a href="https://drive.google.com/uc?export=download&id=1nIw3ytz2qXJcU9zXcQ4nV8exIlX4xhyD" target="_blank">✅ Corrigé : Le duel des talents !</a></li>
             </ul>
         </div>
-        <div id="folder-prepa" class="folder-content" style="display:none;">
-            <ul class="doc-list"><li>📝 Fiche : Le futur simple & Le quartier</li></ul>
-        </div>
-        <div id="folder-eval" class="folder-content" style="display:none;">
-            <ul class="doc-list"><li>🎯 Contrôle Continu N°1</li></ul>
-        </div>
-        <div id="folder-langue" class="folder-content" style="display:none;">
-            <ul class="doc-list"><li>🗣️ Exercices : Donner son opinion</li></ul>
-        </div>
     </section>
 </main>
-
-<script>
-    // Fonction simple pour ouvrir/fermer les dossiers
-    function toggleFolder(id) {
-        const folder = document.getElementById(id);
-        // On ferme les autres dossiers ouverts dans la même section pour rester propre
-        const currentSection = folder.parentElement;
-        currentSection.querySelectorAll('.folder-content').forEach(c => {
-            if(c.id !== id) c.style.display = 'none';
-        });
-        
-        // On bascule l'affichage du dossier cliqué
-        folder.style.display = (folder.style.display === 'none') ? 'block' : 'none';
-    }
-</script>
-
 </body>
 </html>
