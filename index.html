@@ -5,28 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAM-PRO | Espace Enseignant</title>
     <link rel="stylesheet" href="style.css">
-    
-    <script>
-        function toggleFolder(id) {
-            const folder = document.getElementById(id);
-            if (!folder) return; // Sécurité si l'ID n'existe pas
-
-            // On ferme les autres dossiers de la même section pour que ce soit propre
-            const parentSection = folder.closest('.pro-section');
-            parentSection.querySelectorAll('.folder-content').forEach(content => {
-                if (content.id !== id) {
-                    content.style.display = 'none';
-                }
-            });
-
-            // On affiche ou cache le dossier cliqué
-            if (folder.style.display === 'none' || folder.style.display === '') {
-                folder.style.display = 'block';
-            } else {
-                folder.style.display = 'none';
-            }
-        }
-    </script>
 </head>
 <body>
     <header class="pro-header">
@@ -43,30 +21,30 @@
             <h2>Mon Carnet de Bord</h2>
         </div>
         <div class="button-grid">
-            <button class="grid-btn" onclick="toggleFolder('folder-journal')">🗓️ Cahier journal</button>
-            <button class="grid-btn" onclick="toggleFolder('folder-mentales')">🧠 Mes cartes mentales</button>
-            <button class="grid-btn" onclick="toggleFolder('folder-rapports')">📊 Rapports</button>
-            <button class="grid-btn" onclick="toggleFolder('folder-stats')">📈 Statistiques</button>
+            <button class="grid-btn" onclick="toggleFolder('f-journal')">🗓️ Cahier journal</button>
+            <button class="grid-btn" onclick="toggleFolder('f-mentales')">🧠 Mes cartes mentales</button>
+            <button class="grid-btn" onclick="toggleFolder('f-rapports')">📊 Rapports</button>
+            <button class="grid-btn" onclick="toggleFolder('f-stats')">📈 Statistiques</button>
         </div>
 
-        <div id="folder-journal" class="folder-content" style="display:none;">
+        <div id="f-journal" class="folder-content" style="display:none;">
             <ul class="doc-list">
-                <li><a href="https://drive.google.com/uc?export=download&id=1dpiqHIZsXvOWav5gRxn6Hhry8tV25sVt" target="_blank">📄 Accéder au Cahier Journal</a></li>
+                <li><a href="https://drive.google.com/file/d/1dpiqHIZsXvOWav5gRxn6Hhry8tV25sVt/view?usp=sharing" target="_blank">📄 Ouvrir le Cahier Journal</a></li>
             </ul>
         </div>
-        <div id="folder-mentales" class="folder-content" style="display:none;">
+        <div id="f-mentales" class="folder-content" style="display:none;">
             <ul class="doc-list">
-                <li><a href="https://drive.google.com/uc?export=download&id=16JsUtpRGedcYCJT1gR08CBs5AFziUtkV" target="_blank">🧠 Carte Mentale : Mes opinions et mes émotions</a></li>
+                <li><a href="https://drive.google.com/file/d/16JsUtpRGedcYCJT1gR08CBs5AFziUtkV/view?usp=sharing" target="_blank">🧠 Carte Mentale : Mes opinions et mes émotions </a></li>
             </ul>
         </div>
-        <div id="folder-rapports" class="folder-content" style="display:none;">
+        <div id="f-rapports" class="folder-content" style="display:none;">
             <ul class="doc-list">
-                <li><a href="https://drive.google.com/uc?export=download&id=1HBPqSnZeAo64NUEkY66jxNJkE_2FqDKg" target="_blank">📄 Consulter les Rapports</a></li>
+                <li><a href="https://drive.google.com/file/d/1HBPqSnZeAo64NUEkY66jxNJkE_2FqDKg/view?usp=sharing" target="_blank">📄 Consulter le Rapport</a></li>
             </ul>
         </div>
-        <div id="folder-stats" class="folder-content" style="display:none;">
+        <div id="f-stats" class="folder-content" style="display:none;">
             <ul class="doc-list">
-                <li><a href="https://drive.google.com/uc?export=download&id=1t5gdK4ShAwBG1Wx4GtNeX7wcT6kn2zKp" target="_blank">📈 Voir les Statistiques de classe</a></li>
+                <li><a href="https://drive.google.com/file/d/1t5gdK4ShAwBG1Wx4GtNeX7wcT6kn2zKp/view?usp=sharing" target="_blank">📈 Statistiques de classe</a></li>
             </ul>
         </div>
     </section>
@@ -76,15 +54,14 @@
             <h2>Documents Administratifs</h2>
         </div>
         <div class="button-grid">
-            <button class="grid-btn" onclick="toggleFolder('folder-appel')">🗓️ Registre d’appel</button>
-            <button class="grid-btn" onclick="toggleFolder('folder-edt')">🧠 Emploi du temps</button>
-            <button class="grid-btn" onclick="toggleFolder('folder-vacances')">📊 Vacances Scolaire</button>
-            <button class="grid-btn" onclick="toggleFolder('folder-planif')">📈 Planification annuelle</button>
+            <button class="grid-btn" onclick="toggleFolder('f-appel')">🗓️ Registre d'appel</button>
+            <button class="grid-btn" onclick="toggleFolder('f-edt')">🧠 Emploi du temps</button>
+            <button class="grid-btn" onclick="toggleFolder('f-vacances')">📊 Vacances Scolaire</button>
+            <button class="grid-btn" onclick="toggleFolder('f-planif')">📈 Planification annuelle</button>
         </div>
-
-        <div id="folder-edt" class="folder-content" style="display:none;">
+        <div id="f-edt" class="folder-content" style="display:none;">
             <ul class="doc-list">
-                <li><a href="https://drive.google.com/uc?export=download&id=1VOkS1Bh0nnYchRKoVBH_z410McQpp8IM" target="_blank">📅 Télécharger l'Emploi du temps</a></li>
+                <li><a href="https://drive.google.com/file/d/1VOkS1Bh0nnYchRKoVBH_z410McQpp8IM/view?usp=sharing" target="_blank">📅 Voir l'Emploi du temps</a></li>
             </ul>
         </div>
     </section>
@@ -94,18 +71,29 @@
             <h2>Ressources Pédagogiques (6APG)</h2>
         </div>
         <div class="button-grid">
-            <button class="grid-btn" onclick="toggleFolder('folder-corriges')">✅ Corrigés</button>
-            <button class="grid-btn" onclick="toggleFolder('folder-prepa')">📝 Préparations</button>
-            <button class="grid-btn" onclick="toggleFolder('folder-eval')">🎯 Évaluations</button>
-            <button class="grid-btn" onclick="toggleFolder('folder-langue')">🗣️ Langue</button>
+            <button class="grid-btn" onclick="toggleFolder('f-corriges')">✅ Corrigés</button>
+            <button class="grid-btn" onclick="toggleFolder('f-prepa')">📝 Préparations</button>
+            <button class="grid-btn" onclick="toggleFolder('f-eval')">🎯 Évaluations</button>
+            <button class="grid-btn" onclick="toggleFolder('f-langue')">🗣️ Langue</button>
         </div>
-
-        <div id="folder-corriges" class="folder-content" style="display:none;">
+        <div id="f-corriges" class="folder-content" style="display:none;">
             <ul class="doc-list">
-                <li><a href="https://drive.google.com/uc?export=download&id=1nIw3ytz2qXJcU9zXcQ4nV8exIlX4xhyD" target="_blank">✅ Corrigé : Le duel des talents !</a></li>
+                <li><a href="https://drive.google.com/file/d/1nIw3ytz2qXJcU9zXcQ4nV8exIlX4xhyD/view?usp=sharing" target="_blank">✅ Corrigé : Le duel des talents !</a></li>
             </ul>
         </div>
     </section>
 </main>
+
+<script>
+    function toggleFolder(id) {
+        var folder = document.getElementById(id);
+        if (folder.style.display === "block") {
+            folder.style.display = "none";
+        } else {
+            folder.style.display = "block";
+        }
+    }
+</script>
+
 </body>
 </html>
