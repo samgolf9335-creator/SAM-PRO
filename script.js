@@ -20,3 +20,13 @@ function addResource(title, url) {
     newItem.innerHTML = `<a href="${url}" target="_blank">📄 ${title}</a>`;
     list.appendChild(newItem);
 }
+function toggleFolder(id) {
+    const folder = document.getElementById(id);
+    
+    // Cette ligne vérifie si le dossier est caché, et l'affiche si c'est le cas
+    if (folder.style.display === 'none' || folder.style.display === '') {
+        folder.style.display = 'block';
+    } else {
+        folder.style.display = 'none';
+    }
+}
