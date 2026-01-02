@@ -16,6 +16,17 @@
 
    <main class="container">
     <section class="pro-section purple-top">
+        <div id="section-accueil" class="content-section">
+                    <div class="welcome-card" id="login-form">
+                        <h2>🔒 Espace Sécurisé</h2>
+                        <p>Veuillez entrer le code de la classe pour accéder aux cours et aux devoirs.</p>
+                        <div style="margin-top: 20px;">
+                            <input type="password" id="class-password" placeholder="Mot de passe..." style="padding: 10px; border-radius: 5px; border: 1px solid #ddd; width: 200px;">
+                            <button onclick="checkPassword()" style="padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">Connexion</button>
+                        </div>
+                        <p id="login-error" style="color: red; display: none; margin-top: 10px;">❌ Code incorrect, réessayez.</p>
+                    </div>
+
         <div class="section-header">
             <span class="icon-book">📓</span>
             <h2>Mon Carnet de Bord</h2>
