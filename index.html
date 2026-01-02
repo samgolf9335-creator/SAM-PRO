@@ -5,26 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAM-PRO | Espace Enseignant</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style pour centrer le formulaire de connexion */
+        .welcome-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 50px auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header class="pro-header">
         <div class="header-content">
             <h1>SAM-PRO</h1>
             <p>Gestion Pédagogique & Ressources</p>
+        </div>
+        
+        <div id="section-accueil" class="content-section">
+            <div class="welcome-card" id="login-form">
+                <h2>🔒 Espace Sécurisé</h2>
+                <p>Veuillez entrer le code pour accéder aux ressources.</p>
+                <div style="margin-top: 20px;">
+                    <input type="password" id="class-password" placeholder="Mot de passe..." style="padding: 10px; border-radius: 5px; border: 1px solid #ddd; width: 200px;">
+                    <button onclick="checkPassword()" style="padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">Connexion</button>
+                </div>
+                <p id="login-error" style="color: red; display: none; margin-top: 10px;">❌ Code incorrect, réessayez.</p>
             </div>
-             <div id="section-accueil" class="content-section">
-                    <div class="welcome-card" id="login-form">
-                        <h2>🔒 Espace Sécurisé</h2>
-                        <p>Veuillez entrer le code  pour accéder.</p>
-                        <div style="margin-top: 20px;">
-                            <input type="password" id="class-password" placeholder="Mot de passe..." style="padding: 10px; border-radius: 5px; border: 1px solid #ddd; width: 200px;">
-                            <button onclick="checkPassword()" style="padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">Connexion</button>
-                        </div>
-                        <p id="login-error" style="color: red; display: none; margin-top: 10px;">❌ Code incorrect, réessayez.</p>
         </div>
     </header>
 
-   <main class="container">
+   <main id="main-content" class="container" style="display:none;">
     <section class="pro-section purple-top">
         <div class="section-header">
             <span class="icon-book">📓</span>
@@ -44,7 +58,7 @@
         </div>
         <div id="f-mentales" class="folder-content" style="display:none;">
             <ul class="doc-list">
-                <li><a href="https://drive.google.com/file/d/1Qh66Lhup4siXBjU8K3dQaJK3rVlxE1CQ/view?usp=sharing" target="_blank">🧠 Carte Mentale </a></li>
+                <li><a href="https://drive.google.com/file/d/1Qh66Lhup4siXBjU8K3dQaJK3rVlxE1CQ/view?usp=sharing" target="_blank">🧠 Carte Mentale</a></li>
             </ul>
         </div>
         <div id="f-rapports" class="folder-content" style="display:none;">
@@ -90,26 +104,26 @@
             </ul>
         </div>
     </section>
-
-    <section class="pro-section">
-        <div class="section-header">
-            <h2>Ressources Pédagogiques (6APG)</h2>
-        </div>
-        <div class="button-grid">
-            <button class="grid-btn" onclick="toggleFolder('f-corriges')">✅ Corrigés</button>
-            <button class="grid-btn" onclick="toggleFolder('f-prepa')">📝 Préparations</button>
-            <button class="grid-btn" onclick="toggleFolder('f-eval')">🎯 Évaluations</button>
-            <button class="grid-btn" onclick="toggleFolder('f-langue')">🗣️ Langue</button>
-        </div>
-        <div id="f-corriges" class="folder-content" style="display:none;">
-            <ul class="doc-list">
-                <li><a href="https://drive.google.com/file/d/1nIw3ytz2qXJcU9zXcQ4nV8exIlX4xhyD/view?usp=sharing" target="_blank">✅ Corrigé : Le duel des talents !</a></li>
-            </ul>
-        </div>
-    </section>
 </main>
 
 <script>
+    // FONCTION POUR LE MOT DE PASSE
+    function checkPassword() {
+        const password = document.getElementById('class-password').value;
+        const errorMsg = document.getElementById('login-error');
+        const loginForm = document.getElementById('login-form');
+        const mainContent = document.getElementById('main-content');
+        
+        // VOTRE CODE DE CONNEXION (Exemple: 1234)
+        if (password === '1234') { 
+            loginForm.style.display = 'none'; // Cache le formulaire
+            mainContent.style.display = 'block'; // Affiche le site
+        } else {
+            errorMsg.style.display = 'block'; // Affiche l'erreur
+        }
+    }
+
+    // FONCTION POUR LES DOSSIERS
     function toggleFolder(id) {
         var folder = document.getElementById(id);
         if (folder.style.display === "block") {
@@ -119,6 +133,5 @@
         }
     }
 </script>
-
 </body>
 </html>
